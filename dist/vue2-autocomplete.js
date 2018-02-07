@@ -683,7 +683,8 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
     },
     on: {
       "input": [function($event) {
-        if ($event.target.composing) { return; }
+        // This line would forbit Chines input
+        // if ($event.target.composing) { return; }
         _vm.type = $event.target.value
       }, _vm.handleInput],
       "dblclick": _vm.handleDoubleClick,
